@@ -41,6 +41,8 @@ class LoginRequest extends FormRequest
      */
     public function authenticate(): void
     {
+        //User, Agent, Admin name login test
+
         $this->ensureIsNotRateLimited();
 
         $user = User::where('email',$this->login)
